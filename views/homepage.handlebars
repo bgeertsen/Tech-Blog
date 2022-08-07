@@ -1,0 +1,15 @@
+<ul class="post-list">
+  {{#each posts}}
+  <li>
+    <article class="post">
+      <div class="title">
+        <a href="/post/{{id}}"><h3>{{title}}</h3></a>
+      </div>
+      <div class="meta">
+        {{created_at}}
+        <span>{{comments.length}} comment(s)</span>
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ul>

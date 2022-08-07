@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(202, 210, 197);
+  color: rgb(47, 62, 70);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 1em;
+}
+
+header {
+  background-color: rgb(132, 169, 140);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#login, #logout {
+  justify-content: right;
+}
+
+h3 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+label {
+  font-size: 1.5em;
+  float: left;
+  text-align: right;
+  margin-right: 15px;
+  width: 100px;
+}
+
+form {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+input[type=text], input[type=password] {
+  width: 250px;
+  height: 45px;
+
+
+}
+
+div {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+button {
+  background-color: rgb(132, 169, 140);
+  color: rgb(47, 62, 70);
+  font-weight: bold;
+  font-size: 2em;
+  border-radius: 25px;
+  width: 300px;
+  height: 45px;
+}
