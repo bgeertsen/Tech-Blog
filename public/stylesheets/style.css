@@ -73,3 +73,38 @@ button {
   width: 300px;
   height: 45px;
 }
+
+.user {
+  margin-top: 0;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  justify-content: center;
+}
+
+.content {
+  margin-left: 25px;
+}
+
+#comment-input {
+  width: 500px;
+  height: 45px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  padding: 15px;
+  margin: 15px;
+  width: 600px;
+  background-color: rgb(52, 78, 65);
+  color: rgb(218, 215, 205)
+}
