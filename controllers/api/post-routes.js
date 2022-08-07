@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 
 router.post("/", (req, res) => {
   Post.create({
@@ -32,6 +32,20 @@ router.get("/:id", (req, res) => {
       id: req.params.id,
     },
     attributes: ["id", "title", "content", "created_at"],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'user_id', 'post_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
   })
     .then((dbPostData) => {
       if (!dbPostData) {
