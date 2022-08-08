@@ -108,3 +108,29 @@ button {
   background-color: rgb(52, 78, 65);
   color: rgb(218, 215, 205)
 }
+
+#post-input {
+    width: 75vw;
+    height: 40vh;
+    margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.users-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.user-post h2, p {
+  margin: 0;
+
+}

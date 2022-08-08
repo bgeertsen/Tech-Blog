@@ -18,7 +18,7 @@ Post.init(
     },
 
     content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('long'),
       allowNull: false,
     },
 

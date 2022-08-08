@@ -13,9 +13,14 @@
       <a href='/'>Tech Blog</a>
     </h1>
     {{#if loggedIn}}
-      <h2>
-        <a id="logout" href="/logout">Logout</a>
-      </h2>
+      <div>
+        <h2>
+          <a id="dashboard" href="/dashboard">Dashboard</a>
+        </h2>
+        <h2>
+          <a id="logout" href="/logout">Logout</a>
+        </h2>
+      </div>
     {{else}}
       <h2>
         <a id="login" href="/login">Login</a>
