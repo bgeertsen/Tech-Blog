@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
-const withAuth = require('../../utils/auth');
+const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, (req, res) => {
   Post.create({
@@ -36,17 +36,17 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'user_id', 'post_id', 'created_at'],
+        attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ["username"],
+        },
       },
       {
         model: User,
-        attributes: ['username']
-      }
-    ]
+        attributes: ["username"],
+      },
+    ],
   })
     .then((dbPostData) => {
       if (!dbPostData) {
@@ -60,7 +60,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", (req, res) => {
   Post.update(
     {
       title: req.body.title,
